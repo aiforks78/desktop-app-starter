@@ -23,11 +23,18 @@ const kcase = (s) => splitWords(s).join('-');
 
 const Ccase = (s) => splitWords(s).join('_').toUpperCase();
 
+// "word-counter" -> "Word Counter" (the Sidebar label)
+const tcase = (s) =>
+  splitWords(s)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
 export default function plopConfig(plop) {
   plop.setHelper('pcase', pcase);
   plop.setHelper('ccase', ccase);
   plop.setHelper('kcase', kcase);
   plop.setHelper('Ccase', Ccase);
+  plop.setHelper('tcase', tcase);
 
   plop.setGenerator('feature', {
     description: 'Scaffold a new feature module + register it in screens-registry.ts',
@@ -57,9 +64,9 @@ export default function plopConfig(plop) {
       {
         type: 'modify',
         path: 'src/renderer/screens-registry.ts',
-        pattern: /(\r?\nexport type ScreenSection)/,
+        pattern: /(\r?\n\r?\nexport type ScreenSection)/,
         template:
-          "import { {{pcase name}}Screen } from '@features/{{kcase name}}/components/{{pcase name}}Screen';$1",
+          "\nimport { {{pcase name}}Screen } from '@features/{{kcase name}}/components/{{pcase name}}Screen';$1",
       },
       // New screens go in the main section, just above Settings.
       // The entry uses the `Sparkles` icon, which the registry already imports.
@@ -68,7 +75,7 @@ export default function plopConfig(plop) {
         path: 'src/renderer/screens-registry.ts',
         pattern: /(\r?\n {2}\{\s*id: 'settings',)/,
         template:
-          "\n  {\n    id: '{{kcase name}}',\n    label: '{{pcase name}}',\n    icon: Sparkles,\n    section: 'main',\n    Component: {{pcase name}}Screen,\n  },$1",
+          "\n  {\n    id: '{{kcase name}}',\n    label: '{{tcase name}}',\n    icon: Sparkles,\n    section: 'main',\n    Component: {{pcase name}}Screen,\n  },$1",
       },
     ],
   });

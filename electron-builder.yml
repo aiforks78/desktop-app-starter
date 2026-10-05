@@ -1,5 +1,5 @@
-appId: com.example.electron-starter-mini
-productName: Electron Starter Mini
+appId: com.example.desktop-app-starter
+productName: Desktop App Starter
 # Optional: copyright: "Copyright © 2026 Your Name"
 
 directories:

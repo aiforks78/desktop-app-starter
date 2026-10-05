@@ -78,7 +78,7 @@ function helpMenu(): MenuItemConstructorOptions {
       {
         label: 'Documentation',
         click: () => {
-          void shell.openExternal('https://github.com/hassancs91/electron-starter-mini');
+          void shell.openExternal('https://github.com/hassancs91/desktop-app-starter');
         },
       },
     ],

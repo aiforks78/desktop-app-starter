@@ -116,7 +116,7 @@ export function HomeScreen() {
             className="mb-5"
           >
             <h1 className="text-[22px] font-semibold text-accent-light mb-1">
-              {info?.name ?? 'Electron Starter Mini'}
+              {info?.name ?? 'Desktop App Starter'}
             </h1>
             <p className="text-[12px] text-text-muted max-w-[620px]">
               A desktop app that already runs. Open this folder in Claude Code and ask for a screen:

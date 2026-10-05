@@ -1,6 +1,6 @@
 {
-  "name": "electron-starter-mini",
-  "productName": "Electron Starter Mini",
+  "name": "desktop-app-starter",
+  "productName": "Desktop App Starter",
   "version": "0.1.0",
   "description": "A free, MIT-licensed Electron + React + TypeScript + Tailwind starter built for Claude Code: one prompt, one screen, the same structure every time.",
   "main": "out/main/index.js",
@@ -8,11 +8,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hassancs91/electron-starter-mini.git"
+    "url": "git+https://github.com/hassancs91/desktop-app-starter.git"
   },
-  "homepage": "https://github.com/hassancs91/electron-starter-mini",
+  "homepage": "https://github.com/hassancs91/desktop-app-starter",
   "bugs": {
-    "url": "https://github.com/hassancs91/electron-starter-mini/issues"
+    "url": "https://github.com/hassancs91/desktop-app-starter/issues"
   },
   "private": true,
   "engines": {

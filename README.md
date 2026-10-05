@@ -1,4 +1,4 @@
-# Electron Starter Mini
+# Desktop App Starter
 
 A free desktop app starter built for **Claude Code**. Electron 41, React 19, TypeScript, Tailwind 4.
 
@@ -28,7 +28,7 @@ MIT licensed. Use it for anything.
 Requires **Node.js 20.19+ or 22.12+**.
 
 ```bash
-git clone https://github.com/hassancs91/electron-starter-mini.git my-app
+git clone https://github.com/hassancs91/desktop-app-starter.git my-app
 cd my-app
 npm install
 npm run setup

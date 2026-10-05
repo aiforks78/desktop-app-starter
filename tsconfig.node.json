@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@main/*": ["src/main/*"],
+      "@logging/*": ["src/logging/*"]
+    }
+  },
+  "include": [
+    "src/main/**/*",
+    "src/preload/**/*",
+    "src/shared/ai/**/*",
+    "src/shared/env/**/*",
+    "src/shared/ipc/**/*",
+    "src/shared/types/**/*",
+    "src/shared/validation/**/*",
+    "src/logging/**/*",
+    "electron.vite.config.*"
+  ]
+}

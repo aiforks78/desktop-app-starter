@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+out/
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Security scan artifacts
+electronegativity-report.*
+scan-artifacts/
+
+# Seller-internal — not shipped to buyers
+marketing/
+my_notes.md
+PLAN.md
+VULNERIBILITY_SCAN.md
+MAC_TEST.md
+TESTING.md
+SALES.md

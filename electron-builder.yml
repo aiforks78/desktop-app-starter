@@ -1,0 +1,63 @@
+appId: com.example.electron-starter-mini
+productName: Electron Starter Mini
+# Optional: copyright: "Copyright © 2026 Your Name"
+
+directories:
+  output: dist
+  buildResources: resources
+
+asar: true
+files:
+  - out/**/*
+  - package.json
+
+# No auto-update feed in the mini. Builds are local, unsigned installers.
+publish: null
+
+# ----- Windows -----
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: ${name}-${version}-${arch}-setup.${ext}
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: ${productName}
+
+# ----- macOS (unsigned; Gatekeeper will ask the user to confirm on first open) -----
+mac:
+  target:
+    - target: dmg
+      arch: [arm64, x64]
+  category: public.app-category.developer-tools
+  artifactName: ${name}-${version}-${arch}.${ext}
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.inherit.plist
+  notarize: false
+
+dmg:
+  artifactName: ${name}-${version}-${arch}.${ext}
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
+# ----- Linux -----
+linux:
+  target:
+    - target: AppImage
+      arch: [x64]
+    - target: deb
+      arch: [x64]
+  category: Utility
+  artifactName: ${name}-${version}-${arch}.${ext}

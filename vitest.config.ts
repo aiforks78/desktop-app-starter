@@ -1,0 +1,18 @@
+import { defineConfig } from 'vitest/config';
+import path from 'node:path';
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@shared': path.resolve('./src/shared'),
+      '@renderer': path.resolve('./src/renderer'),
+      '@features': path.resolve('./src/features'),
+      '@main': path.resolve('./src/main'),
+      '@logging': path.resolve('./src/logging'),
+    },
+  },
+  test: {
+    environment: 'node',
+    include: ['src/**/__tests__/**/*.test.{ts,tsx}'],
+  },
+});

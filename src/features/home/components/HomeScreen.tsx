@@ -44,7 +44,7 @@ const BLOCKS: { icon: LucideIcon; title: string; body: string }[] = [
   },
   {
     icon: Blocks,
-    title: '20 components',
+    title: '21 components',
     body: 'Buttons, inputs, tables, dialogs, toasts, tabs, tooltips, layout. Open the Components screen.',
   },
   {

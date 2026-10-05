@@ -15,7 +15,7 @@ MIT licensed. Use it for anything.
 - **Claude, ready to call.** `askClaude`, `streamClaude` and `askClaudeJson` (zod-validated JSON) in the main process. Your API key is encrypted by the OS and never reaches the UI.
 - **Your files.** Native file and folder pickers, drag and drop, and a file service that only touches what the user chose.
 - **Settings and secrets.** Typed settings that persist, secrets in Electron `safeStorage`.
-- **20 components.** Buttons, inputs, select, table, modal, confirm dialog, toasts, tabs, tooltips, layout primitives. See them on the Components screen.
+- **21 components, 8 layout and 3 motion primitives.** Buttons, inputs, select, table, modal, confirm dialog, toasts, tabs, tooltips, and more. See them on the Components screen.
 - **Motion.** The `motion` library plus `FadeIn`, `SlideIn`, `ScaleIn`.
 - **Themes.** System, light, dark and three more.
 - **Generators.** `npm run new:feature` and `npm run new:ipc` write the wiring in every place it goes.
